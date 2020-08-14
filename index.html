@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+   <link rel="stylesheet" href="css/style.css">
+   <!-- <script defer src="js/script.js"></script> -->
+   <title>ProjectThree</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="content">
+
+         <div class="header">
+            <div class="header__container">
+               <div class="header__body">
+                  <div class="header__top">
+                     <div class="header__logo"><img src="img/header/logo.png" alt=""></div>
+                     <div class="header__burger">
+                        <div class="header__burger-icon"></div>
+                     </div>
+                     <nav class="header__menu">
+                        <div>
+                           <ul>
+                              <li><a class="header__menu-item" href="#">Hello</a></li>
+                              <li><a class="header__menu-item" href="#">About</a></li>
+                              <li><a class="header__menu-item" href="#">Services</a></li>
+                              <li><a class="header__menu-item" href="#">Portfolio</a></li>
+                              <li><a class="header__menu-item" href="#">Team</a></li>
+                              <li><a class="header__menu-item" href="#">Blog</a></li>
+                              <li><a class="header__menu-item" href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                     </nav>
+                     <nav class="header__nav">
+                           <ul>
+                              <li><a class="" href="#">Hello</a></li>
+                              <li><a class="" href="#">About</a></li>
+                              <li><a class="" href="#">Services</a></li>
+                              <li><a class="" href="#">Portfolio</a></li>
+                              <li><a class="" href="#">Team</a></li>
+                              <li><a class="" href="#">Blog</a></li>
+                              <li><a class="" href="#">Contact</a></li>
+                            </ul>
+                     </nav>
+                     <script>
+                        document.querySelector('.header__burger').onclick = function(){
+                        document.querySelector('.header__burger-icon').classList.toggle('header__burger-active');
+                        document.querySelector('.header__menu').classList.toggle('header__menu-active');
+                     }
+                     </script>
+                  </div>
+                  <div class="header__text">
+                     <div class="header__title">We Are Code Cafe</div>
+                     <div class="header__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</div>
+                  </div>
+                  <div class="header__arrow">
+                     <div class="header__arrow-bg">
+                        <img src="img/header/arrow.png" alt="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+   <script src="js/script.js"></script>
+</body>
+
+</html>
