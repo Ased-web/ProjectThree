@@ -227,7 +227,7 @@ body {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
+          align-self: center;
   position: relative;
   -webkit-animation: arrow 1.5s infinite linear;
           animation: arrow 1.5s infinite linear;
