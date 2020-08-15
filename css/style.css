@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;1,300&display=swap");
 /*--------------------*/
 /*Reset*/
@@ -99,6 +99,30 @@ body {
           flex: 1 1 auto;
 }
 
+.title {
+  text-align: center;
+  color: #333b46;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  /* Text style for "DetailS AB" */
+  letter-spacing: 4px;
+  padding: 0 15px 40px 15px;
+}
+
+.subtitle {
+  text-align: center;
+  max-width: 460px;
+  margin: 0 auto;
+  color: #81868e;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  /* Text style for "A, t vero" */
+  letter-spacing: 0.7px;
+  padding: 0 15px;
+}
+
 .header {
   padding-top: 48px;
   background-image: url("../img/header/bg.jpg");
@@ -109,8 +133,8 @@ body {
 }
 
 .header__container {
-  max-width: 1190px;
-  padding: 0 10px;
+  max-width: 1200px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -125,7 +149,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 75vh;
+  height: 80vh;
 }
 
 .header__top {
@@ -151,13 +175,23 @@ body {
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
-  padding: 5px 20px;
+  margin: 0 15px;
   border: 1px solid transparent;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: margin, padding;
+  transition-property: margin, padding;
 }
 
 .header__nav ul li a:hover {
+  margin: 0 5px;
+  padding: 5px 20px;
   border-radius: 17px;
   border: 1px solid #ffffff;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: border, margin, padding;
+  transition-property: border, margin, padding;
 }
 
 .header__title {
@@ -166,10 +200,12 @@ body {
   font-family: "Source Sans Pro";
   font-size: 35px;
   font-weight: 300;
-  line-height: 70px;
   text-transform: uppercase;
   /* Text style for "We Are Cod" */
   letter-spacing: 7px;
+  padding-bottom: 40px;
+  -webkit-transition: padding-bottom, 0.2s;
+  transition: padding-bottom, 0.2s;
 }
 
 .header__subtitle {
@@ -192,6 +228,36 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  -webkit-animation: arrow 1.5s infinite linear;
+          animation: arrow 1.5s infinite linear;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 0;
+  }
 }
 
 .header__arrow-bg {
@@ -216,10 +282,16 @@ body {
 }
 
 @media (max-width: 768px) {
+  .header__title {
+    -webkit-transition: padding-bottom, 0.2s;
+    transition: padding-bottom, 0.2s;
+    padding-bottom: 15px;
+  }
   .header__nav {
     display: none;
   }
   .header__burger {
+    top: -5px;
     width: 30px;
     height: 30px;
     display: -webkit-box;
@@ -233,6 +305,7 @@ body {
             align-items: center;
     z-index: 5;
     position: relative;
+    cursor: pointer;
   }
   .header__burger-icon {
     position: relative;
@@ -313,6 +386,212 @@ body {
             transition-duration: .25s;
   }
   .header__menu-item:hover {
-    background-color: #CFD8DC;
+    background-color: #a2a9ac;
+  }
+}
+
+.bouncy {
+  padding: 80px 0 60px 0;
+}
+
+.bouncy__container {
+  max-width: 880px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.bouncy__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bouncy__title {
+  color: #333b46;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  /* Text style for "This is Bo" */
+  letter-spacing: 4px;
+  padding: 34px 0 50px 0;
+}
+
+.bouncy__text {
+  color: #81868e;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  /* Text style for "A, t vero" */
+  letter-spacing: 0.7px;
+  max-width: 470px;
+  padding-bottom: 30px;
+}
+
+.bouncy__btn a {
+  color: #333b46;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 19px;
+  border: 1px solid #333b46;
+  padding: 8px 22px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.bouncy__btn a:hover {
+  -webkit-box-shadow: 0 0 2px;
+          box-shadow: 0 0 2px;
+  background-color: #d5f7f7;
+}
+
+@media (max-width: 768px) {
+  .bouncy {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    padding: 40px 0 30px 0;
+  }
+  .bouncy__row {
+    margin: 0 -20px;
+  }
+  .bouncy__body {
+    padding: 0 20px;
+  }
+  .bouncy__img {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .bouncy__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .bouncy__title {
+    text-align: center;
+  }
+  .bouncy__btn {
+    text-align: center;
+  }
+  .bouncy__img {
+    padding: 30px 0 0 0;
+    margin: 0 auto;
+  }
+}
+
+.about {
+  background-color: #f3f3f3;
+  padding: 80px 0 100px 0;
+}
+
+.about__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about__icon-bg {
+  margin: 60px 27px 60px 0;
+  width: 53px;
+  height: 53px;
+  background-color: #81868e;
+  border-radius: 50%;
+}
+
+.about__icon-bg:last-child {
+  margin: 60px 0 60px 0;
+}
+
+.about__icon-bg img {
+  position: relative;
+}
+
+.about__icon-heart {
+  top: 16px;
+  left: 13px;
+}
+
+.about__icon-mouse {
+  top: 9px;
+  left: 18px;
+}
+
+.about__icon-lamp {
+  top: 11px;
+  left: 16px;
+}
+
+.about__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about__title-text {
+  color: #464646;
+  font-size: 20px;
+  font-weight: 400;
+  /* Text style for "Creative I" */
+  letter-spacing: 0.8px;
+  padding-bottom: 20px;
+}
+
+.about__text {
+  color: #81868e;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.about__text span {
+  color: #19bd9a;
+  font-weight: 700;
+}
+
+.about__text b {
+  color: #636971;
+  font-weight: 700;
+}
+
+.about__text-first {
+  max-width: 325px;
+  padding-top: 20px;
+}
+
+.about__text-second {
+  max-width: 550px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .about__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about__title-text {
+    text-align: center;
+  }
+  .about__text-first {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .about__text-second {
+    margin: 0 auto;
+    padding-left: 0px;
   }
 }
