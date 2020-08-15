@@ -56,18 +56,77 @@
                      <div class="header__title">We Are Code Cafe</div>
                      <div class="header__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</div>
                   </div>
-                  <div class="header__arrow">
+                  <div class="header__arrow " id="scroll_down">
                      <div class="header__arrow-bg">
                         <img src="img/header/arrow.png" alt="">
                      </div>
                   </div>
+                  <script>(function() {
+                     'use strict';
+
+                     let btnScrollDown = document.querySelector('#scroll_down');
+                   
+                     function scrollDown() {
+                       let windowCoords = document.documentElement.clientHeight;
+                       (function scroll() {
+                         if (window.pageYOffset < windowCoords) {
+                           window.scrollBy(0, 10);
+                           setTimeout(scroll, 0);
+                         }
+                         if (window.pageYOffset > windowCoords) {
+                           window.scrollTo(0, windowCoords);
+                         }
+                       })();
+                     }
+                   
+                     btnScrollDown.addEventListener('click', scrollDown);
+                   })();</script>
                </div>
             </div>
          </div>
 
+         <div class="bouncy">
+            <div class="bouncy__container">
+               <div class="bouncy__row">
+                     <div class="bouncy__body">
+                        <div class="bouncy__title">This is Bouncy</div>
+                        <div class="bouncy__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias 
+                           excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+                        </div>
+                        <div class="bouncy__btn">
+                           <a href="#">Read More</a>
+                        </div>
+                     </div>
+                  <div class="bouncy__img"><img src="img/bouncy/ipad.png" alt=""></div>
+               </div>
+            </div>
+         </div>
+
+         <div class="about">
+            <div class="about__title title">Details about bouncy</div>               
+            <div class="about__subtitle subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>
+            <div class="about__icon">
+               <div class="about__icon-bg"><img class="about__icon-heart" src="img/about/icon1.png" alt=""></div>
+               <div class="about__icon-bg"><img class="about__icon-mouse" src="img/about/icon2.png" alt=""></div>
+               <div class="about__icon-bg"><img class="about__icon-lamp" src="img/about/icon3.png" alt=""></div>
+            </div>
+            <div class="about__container">
+               <div class="about__title-text">Creative Ideas</div>
+            <div class="about__row">
+               <div class="about__text about__text-first">At <span>vero</span>  eos et accusamus et iusto odio <b>dignissimos</b> ducimus qui blanditiis 
+                  praesentium voluptatum deleniti atque corrupti quos dolores</div>
+               <div class="about__text about__text-second">
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                   atque <b>corrupti quos</b> dolores et quas molestias <span>excepturi</span> sint occaecati cupiditate non provident, <b>similique</b>
+                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+               </div>
+            </div>
+            </div>
+         </div> 
+ 
       </div>
    </div>
-   <script src="js/script.js"></script>
+   <!-- <script src="js/script.js"></script> -->
 </body>
 
 </html>
