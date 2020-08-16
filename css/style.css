@@ -7,7 +7,7 @@
   margin: 0;
   border: 0;
 }
-/*  */
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -130,6 +130,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+  position: relative;
 }
 
 .header__container {
@@ -225,9 +227,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   position: relative;
   -webkit-animation: arrow 1.5s infinite linear;
           animation: arrow 1.5s infinite linear;
@@ -304,7 +305,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
     z-index: 5;
-    position: relative;
     cursor: pointer;
   }
   .header__burger-icon {
@@ -358,17 +358,17 @@ body {
   }
   .header__menu {
     display: block;
-    position: fixed;
+    position: absolute;
     visibility: hidden;
     top: 0;
-    right: -100%;
+    right: -150px;
     width: 150px;
     height: 400px;
-    margin: 0;
     padding: 80px 0;
     list-style: none;
     background-color: rgba(213, 226, 233, 0.95);
     border-bottom-left-radius: 15px;
+    overflow: hidden;
     -webkit-transition-duration: 0.7s;
             transition-duration: 0.7s;
   }
@@ -483,7 +483,7 @@ body {
 
 .about {
   background-color: #f3f3f3;
-  padding: 80px 0 100px 0;
+  padding: 80px 0 0 0;
 }
 
 .about__icon {
@@ -496,6 +496,11 @@ body {
 }
 
 .about__icon-bg {
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
   margin: 60px 27px 60px 0;
   width: 53px;
   height: 53px;
@@ -509,6 +514,14 @@ body {
 
 .about__icon-bg img {
   position: relative;
+}
+
+.about__icon-bg-active {
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  background-color: #19bd9a;
 }
 
 .about__icon-heart {
@@ -570,12 +583,18 @@ body {
 .about__text-first {
   max-width: 325px;
   padding-top: 20px;
+  padding-bottom: 115px;
 }
 
 .about__text-second {
+  display: none;
   max-width: 550px;
   padding-top: 20px;
   padding-left: 20px;
+}
+
+.about__text-active {
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -589,6 +608,7 @@ body {
   .about__text-first {
     max-width: 550px;
     margin: 0 auto;
+    padding-bottom: 0;
   }
   .about__text-second {
     margin: 0 auto;
